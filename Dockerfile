@@ -3,8 +3,11 @@ WORKDIR /app
 
 COPY . .
 
-ADD https://github.com/mikolajstachnik02-dotcom/Magazyn/releases/download/v1.0/Magazyn.exe /app/Magazyn.exe
+RUN curl -L -o Magazyn.exe https://github.com/mikolajstachnik02-dotcom/Magazyn/releases/download/v1.0/Magazyn.exe
 
 ENTRYPOINT ["Magazyn.exe"]
+
+
+
 
 
